@@ -5,7 +5,7 @@ Template.students.events({
         var mail = event.target.mail.value;
         var dob = event.target.dob.value;
         var pp = event.target.pp.value;
-        
+
         student.insert({
             firstname: firstname,
             lastname: lastname,
@@ -13,9 +13,5 @@ Template.students.events({
             dob: dob,
             pp: pp
         });
-        
-        event.target.text.value = "";
-        event.target.file.value = "";
-        
     }
 });
