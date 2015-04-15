@@ -11,7 +11,15 @@
     </form>
     
     <div id="list-student">
-    
+        {{#each student}}
+        <ul>
+            <li>{{firstname}}</li>
+            <li>{{lastname}}</li>
+            <li>{{mail}}</li>
+            <li>{{dob}}</li>
+            <li><img src={{pp}}></li>
+        </ul>
+        {{/each}}
     </div>
     
 </template>
