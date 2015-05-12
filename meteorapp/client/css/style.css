@@ -7,7 +7,6 @@ body{
     margin: 0;
     font-size: 15px;
     font-family: 'OpenSans', sans-serif;
-    overflow: hidden;
 }
 
 /**********************  HEADER  **********************/
@@ -37,16 +36,43 @@ header div {
     text-decoration: none;
 }
 
+#navigationbar {
+    float: left;
+    height: 90px;
+    width: 40%;
+    color: white;
+    margin-left: 50px;
+}
+
+#navigationbar li {
+    display: inline-block;
+    height:90px;
+    line-height: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition-duration: 0.4s;
+}
+
+#navigationbar li a {
+    color: white;
+    text-decoration: none;
+}
+
+#navigationbar li:hover {
+    cursor: pointer;
+    background-color: #6a7475;
+}
+
 #logo {
     height: 90px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 15%;
+    float: left;
+    margin-left: 10%;
 }
 
 #logo img{
-    height: 90px;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 #content {
@@ -63,3 +89,33 @@ header div {
 
 /**********************  ADD STUDENT  **********************/
 
+#add-student-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.add-student {
+    width: 30%;
+    height: 45px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    display: list-item;
+}
+
+#sub {
+    width: 32%;
+    height: 45px;
+    background-color: #71942D;
+    color: white;
+    border: none;
+    transition-duration: 0.4s;
+}
+
+#sub:hover {
+    cursor: pointer;
+    background-color: #89b439;
+}

@@ -9,3 +9,7 @@ Router.route('/', {
 Router.route('/students', {
     name: 'students'
 });
+
+Router.route('/newstudent', {
+    name: 'new_student'
+});
