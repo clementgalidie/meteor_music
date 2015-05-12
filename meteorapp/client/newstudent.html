@@ -1,12 +1,12 @@
 <template name="newStudent">
-    
+
     <form id="add-student-container">
-        <input id="first-name" class="add-student" name="firstname" placeholder="Type your first-name">
-        <input id="last-name" class="add-student" name="lastname" placeholder="Type your last-name">
-        <input id="mail" class="add-student" name="mail" placeholder="Type your e-mail adress">
-        <input id="dob" class="add-student" name="dob" placeholder="Date of birth">
-        
+        <input type="text" id="first-name" class="add-student" name="firstname" placeholder="Type your first-name" required>
+        <input type="text" id="last-name" class="add-student" name="lastname" placeholder="Type your last-name" required>
+        <input type="email" id="mail" class="add-student" name="mail" placeholder="Type your e-mail adress" required>
+        <input type="date" id="dob" class="add-student" name="dob" required>
+
         <input id="sub" type="submit">
     </form>
-    
+
 </template>
