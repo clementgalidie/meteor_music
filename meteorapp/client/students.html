@@ -6,19 +6,36 @@
         <input id="mail" name="mail" placeholder="Type your e-mail adress">
         <input id="dob" name="dob" placeholder="Date of birth">
         <input id="PP" name="pp" type="file">
+        <input id="notes" name="notes" type="text" placeholder="Type a note">
         
         <input id="sub" type="submit">
     </form>
     
     <div id="list-student">
         {{#each student}}
-        <ul>
-            <li>{{firstname}}</li>
-            <li>{{lastname}}</li>
-            <li>{{mail}}</li>
-            <li>{{dob}}</li>
-            <li><img src={{pp}}></li>
-        </ul>
+        <table border=1px>
+			<thead>
+			<tr>
+				<th>Photo</th>
+				<th>Firstname</th>
+				<th>Lastname</th>
+				<th>Date of birth</th>
+				<th>Mail</th>
+				<th>Notes</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><img src={{pp}} alt="" ></td>
+					<td>{{firstname}}</td>
+					<td>{{lastname}}</td>
+					<td>{{dob}}</td>
+					<td>{{mail}}</td>
+					<td>{{notes}}</td>
+					<td><a href="{{pathFor route='editstudent'}}">Edit</a></td>
+				</tr>
+			</tbody>
+        </table>
         {{/each}}
     </div>
     
