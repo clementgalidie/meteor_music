@@ -4,16 +4,12 @@ Template.newStudent.events({
         var lastname = event.target.lastname.value;
         var mail = event.target.mail.value;
         var dob = event.target.dob.value;
-        var pp = event.target.pp.value;
-        var note = event.target.note.value;
 
         student.insert({
             firstname: firstname,
             lastname: lastname,
             mail: mail,
-            dob: dob,
-            pp: pp,
-            note: note
+            dob: dob
         });
     }
 });
