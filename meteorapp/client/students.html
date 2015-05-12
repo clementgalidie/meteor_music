@@ -2,13 +2,16 @@
     
     <div id="list-student">
         {{#each student}}
-        <ul>
-            <li>{{firstname}}</li>
-            <li>{{lastname}}</li>
-            <li>{{mail}}</li>
-            <li>{{dob}}</li>
-            <li><img src={{pp}}></li>
-        </ul>
+				<tr>
+					<td><img src={{pp}} alt="" ></td>
+					<td>{{firstname}}</td>
+					<td>{{lastname}}</td>
+					<td>{{dob}}</td>
+					<td>{{mail}}</td>
+					<td>{{note}}</td>
+					<td><a href="{{pathFor route='editstudent'}}">Edit</a></td>
+                    
+				</tr>
         {{/each}}
     </div>
     
