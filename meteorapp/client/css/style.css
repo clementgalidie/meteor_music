@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body{
     position: absolute;
     left: 0;
@@ -48,19 +54,21 @@ header div {
     display: inline-block;
     height:90px;
     line-height: 90px;
-    padding-left: 20px;
-    padding-right: 20px;
+    /*padding-left: 20px;
+    padding-right: 20px;*/
     transition-duration: 0.4s;
 }
 
 #navigationbar li a {
     display: block;
+    padding-right: 20px;
+    padding-left: 20px;
     color: white;
     text-decoration: none;
 }
 
-#navigationbar li:hover {
-    cursor: pointer;
+#navigationbar li a:hover,
+#navigationbar li a:focus {
     background-color: #6a7475;
 }
 
@@ -125,7 +133,7 @@ header div {
 }
 
 #sub {
-    width: 32%;
+    width: 30%;
     height: 45px;
     background-color: #71942D;
     color: white;
@@ -138,6 +146,8 @@ header div {
     background-color: #89b439;
 }
 
+#sub:focus {background-color: #89b439;}
+
 /**********************  LIST STUDENT  **********************/
 
 #list-student {
@@ -146,6 +156,54 @@ header div {
     margin-left: auto;
     margin-right: auto;
 }
+
+.list-student {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.list-student-inner {
+    width: 300px;
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+    list-style-type: none;
+    border: 1px solid grey;
+}
+
+.list-student-inner:not(:last-child) {margin-right: 50px;}
+
+.list-student-inner li:not(:first-child) {margin-top: 10px;}
+
+.separator {
+    display: inline-block;
+    width: 33.33%;
+    text-align: center;
+}
+
+.edit {
+    display: inline-block;
+    width: 33.33%;
+    text-align: center;
+}
+
+.edit a {
+    display: block;
+    padding: 5px;
+    background-color: #71942D;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    -webkit-transition: background-color .5s;
+            transition: background-color .5s;
+}
+
+.edit a:hover,
+.edit a:focus {
+    background-color: #89b439;
+}
+
 
 #list-student  tr {
     margin-top: 20px;
@@ -157,24 +215,4 @@ header div {
     margin-right: 2%;
     padding-top: 2%;
     vertical-align: text-top;
-}
-
-.edit-delete {
-    width: 50px;
-    background-color: #71942D;
-    border-radius: 5px;
-    text-align: center;
-    padding: 5px;
-    color: white;
-    cursor: pointer;
-    transition-duration: 0.4s;
-}
-
-.edit-delete:hover {
-    background-color: #89b439;
-}
-
-.edit-delete a {
-    text-decoration: none;
-    color: white;
 }
